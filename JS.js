@@ -80,6 +80,11 @@ canvas.onclick = function(event) {
 
 oneStep_btn.onclick = () => {checkForLife()}
 
+start_btn.onclick = () => {
+	myInterval = setInterval(() => {checkForLife()}, 500);
+}
+
+stop_btn.onclick = function() {clearInterval(myInterval)}
 
 function step() {
 	for (let i = 0; i < 10; i++) {
